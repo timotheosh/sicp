@@ -23,7 +23,7 @@
 
 (/ (+ 5 (- 2 3 (+ 6 1/3))) (* 3 (- 6 2) (- 2 7)))
 
-(define exc3 (a b c)
+(define (exc3 a b c)
     (if (> a b)
       (if (> b c)
           (+ (* a a) (* b b))
@@ -32,3 +32,16 @@
           (if (> a c)
               (+ (* a a) (* b b))
               (+ (* b b) (* c c))))))
+
+(exc3 4 3 2)
+
+(define (p) (p))
+
+(define (test x y)
+  (if (= x 0)
+      0
+      y))
+
+(test 0 (p))
+
+(sum-of-squares (+ 5 1) (* 5 2))
