@@ -1,4 +1,4 @@
-#lang racket
+#lang planet neil/sicp
 ;; exc 1.1
 10
 (+ 5 3 4)
@@ -20,3 +20,21 @@
          ((< a b) b)
          (else -1))
    (+ a 1))
+
+;; exc 1.2
+(/ (+ 5 4 (- 2 (- 3 (+ 6 4/5))))
+   (* 3 (- 6 2) (- 2 7)))
+
+;; exc 1.3
+(define (exc1.3 a b c)
+    (if (> a b)
+      (if (> b c)
+          (+ (* a a) (* b b))
+          (+ (* a a) (* c c)))
+      (if (> b c)
+          (if (> a c)
+              (+ (* a a) (* b b))
+              (+ (* b b) (* c c))))))
+
+(exc1.3 4 3 2)
+
